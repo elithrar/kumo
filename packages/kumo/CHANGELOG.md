@@ -1,5 +1,16 @@
 # @cloudflare/kumo
 
+## 1.5.1
+
+### Patch Changes
+
+- 31cc2e1: Fix AI command USAGE.md path resolution to work correctly from bundled dist output
+- 1ae7dfd: fix(cli): include block source files in build for `kumo add` command
+
+  The `kumo add` command was failing because block source files (`.tsx`) were not being copied to `dist/` during the build process. This adds copying of block source files from `src/blocks/` to `dist/src/blocks/` so the CLI can install them into user projects.
+
+- 3bc976e: fix: delete-resource shouldn't nest buttons within each other
+
 ## 1.5.0
 
 ### Minor Changes
